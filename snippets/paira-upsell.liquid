@@ -1,0 +1,27 @@
+{% assign upsell_handle = product.metafields.paira.upsell_product %}
+
+{% if upsell_handle %}
+
+  {% assign upsell_product = all_products[upsell_handle] %}
+
+  {% if upsell_product %}
+
+    <div class="upsell">
+
+      <h3>You might also like</h3>
+
+      <a href="{{ upsell_product.url }}">
+
+        <img src="{{ upsell_product.featured_image | img_url: 'medium' }}" alt="{{ upsell_product.title }}">
+
+        <h4>{{ upsell_product.title }}</h4>
+
+        <p>{{ upsell_product.price | money }}</p>
+
+      </a>
+
+    </div>
+
+  {% endif %}
+
+{% endif %}

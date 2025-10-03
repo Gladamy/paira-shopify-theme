@@ -1,0 +1,11 @@
+{
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "email_placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "no_results": "No products found"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "main": {
+      "type": "paira-hero"
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Products",
+        "collection": "all"
+      }
+    },
+    "split": {
+      "type": "paira-split"
+    },
+    "usps": {
+      "type": "paira-usps"
+    }
+  },
+  "order": ["main", "featured-collection", "split", "usps"]
+}

@@ -1,0 +1,57 @@
+<div class="usps">
+  {% for block in section.blocks %}
+    <div class="usp">
+      <div class="usp-icon">{{ block.settings.icon }}</div>
+      <h3>{{ block.settings.title }}</h3>
+      <p>{{ block.settings.text }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "USPs",
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (HTML)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USPs",
+      "blocks": [
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        },
+        {
+          "type": "usp"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

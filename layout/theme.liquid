@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  {{ content_for_header }}
+  <link rel="stylesheet" href="{{ 'paira.css' | asset_url }}">
+  <script src="{{ 'global.js' | asset_url }}" defer></script>
+</head>
+<body>
+  {% section 'header' %}
+  <main>
+    {{ content_for_layout }}
+  </main>
+  {% section 'footer' %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div class="hero" style="background-image: url('{{ section.settings.background_image | img_url: 'master' }}');">
+  <div class="hero-content">
+    <h1>{{ section.settings.headline }}</h1>
+    <p>{{ section.settings.subtext }}</p>
+    <a href="{{ section.settings.cta_link }}" class="btn">{{ section.settings.cta_text }}</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ]
+}
+{% endschema %}
